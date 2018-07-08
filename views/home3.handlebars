@@ -1,0 +1,161 @@
+{{!-- <body> --}}
+
+ <button type="submit" id="scrapeBtn" >Scrape Site</button>
+<button type="button" id="showSavedBtn" >See the saved articles</button>
+    {{!-- <nav class="navbar navbar-dark bg-dark navbar-expand-lg ">
+        <a class="navbar-brand" href="#">MongoDb Nytimes Scraper</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  {{!-- <a class="nav-link" href="/saved">Saved Articles</a> --}}
+                  <button type="button" class="btn btn-primary" id="showSavedBtn" >See the saved articles</button>
+                  
+                </li>
+                <li class="nav-item">
+                    {{!-- <button type="button" class="btn btn-primary" id="scrape">scrape Articles</button> --}}
+                     <button type="submit" class="btn btn-primary" id="scrapeBtn" >Scrape Site</button>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 jumbotron">
+                <div class="text-center">
+                    <h2>
+                        Scrape NYTimes latest news  
+                    </h2>
+                    <h3>
+                        MongoDb 
+                    </h3>
+                </div>
+                   
+            </div>
+        </div>
+    </div> --}}
+
+    {{!-- {{#each headline}} 
+        <div class="container">
+            {{#unless saved}}    
+            <div class="row">
+                <div class="col-md-12">
+                <div class='card'>
+                        <div class='card-block'>
+                            <div class='card-header row '>
+                                <div class="mx-auto col-9"  >
+                                    
+                                    <a  href="{{link}}">{{title}}</a>
+                                </div>
+                                <div class=" text-right col-3" >
+                                     <button data-id={{_id}} class="btn btn-success mx-1 mb-1 saveBtn" data-toggle="modal" data-target="#showComment">Save Article</button>
+                                    
+                                   
+                                </div>
+                            </div>
+                            <div class="card-body">
+
+
+
+                                <div class="col-4">
+                                    {{#if img}}
+                                        <img  class="showImg" src="{{img}}"> 
+                                    {{/if}} 
+                                    {{#unless img}}
+                                        <img class="showImg"  src="/assets/images/Photo-Unavailable.jpg"> 
+                        
+                                    {{/unless}}
+                                </div>
+                        
+                                <div class="col-8">
+                                    {{#if summary}}
+                                        <p class='card-text p-3'>
+                                            {{summary}}
+                                        </p>
+                                    {{/if}}
+                                    {{#unless summary}}
+                                        <p>
+                                         We're sorry. Looks like there is no brief summary available from The Los Angeles 
+                                        Times. If you'd like to read more know more about this, please click the title above 
+                                        and you will be redirected to the story. Thanks for understanding.
+                                        </p>
+                                    {{/unless}}
+                                </div>
+
+
+                                   {{!-- <img>
+                                    <p class='card-text p-3 col-md-9'>zdcdsfsdfdsfdsfds</p> --}}
+                              
+                                    
+                                    
+                            </div>
+            </div>
+            </div>
+        </div>
+        </div> 
+            {{/unless}} 
+    </div>
+
+     {{/each}} --}}
+
+{{#each headline}} 
+    <div>
+        
+            {{#unless saved}}
+                <div class="container">
+                    <div class="row">
+                        <div class="col-10">
+                             {{title}}
+                        </div>
+                       <div class="col-2">
+                            <button data-id={{_id}} class="saveBtn" >Save Article</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            {{#if img}}
+                        <img  class="showImg" src="{{img}}"> 
+                        {{/if}} 
+                        {{#unless img}}
+                        <img class="showImg"  src="/assets/images/Photo-Unavailable.jpg"> 
+                        
+                        {{/unless}}
+                         </div>
+                        
+                        <div class="col-8">
+                            {{#if summary}}
+                            <p>
+                            {{summary}}
+                            </p>
+                            {{/if}}
+                             {{#unless summary}}
+                             <p>
+                                 We're sorry. Looks like there is no brief summary available from The Los Angeles 
+                            Times. If you'd like to read more know more about this, please click the title above 
+                            and you will be redirected to the story. Thanks for understanding.
+                             </p>
+                              {{/unless}}
+                        </div>
+                        
+
+                       
+                        
+                    </div>
+
+                </div>
+               
+            {{/unless}}
+    </div>
+     {{/each}}
+   
+{{!-- </body> --}}
+
+<script src="/assets/js/scrape.js"></script>

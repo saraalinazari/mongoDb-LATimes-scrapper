@@ -1,0 +1,31 @@
+body{
+    background-image: url("../images/nytimes.jpg");
+}
+.showImg{
+    width: 300px;
+    height: 200px;
+}
+.jumbotron{
+    background-color: rgba(36, 33, 33, 0.7);
+    /* background-image: url("C:\\Users\\Sara\\Desktop\\Bootcamp\\Week18\\mongoDB\\public\\assets\\images\\nytimes.jpg"); */
+    color: white;
+    border-style: solid;
+    border-color: black;
+ 
+}
+
+.panel-heading{
+    background-color: rgba(36, 33, 33, 0.8);
+    color: white;
+}
+.panel{
+    background-image: url("/assets/images/backpanel.jpg");
+	border-style: solid;
+	border-color: grey;
+	border-width: 8px;
+
+}
+.previousNotes {
+    display: inline-block;
+    width: 90%
+}
