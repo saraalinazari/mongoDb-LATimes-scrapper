@@ -32,11 +32,11 @@ app.use(express.static("public"));
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
 mongoose.Promise = Promise;
-mongoose.connect('mongodb://heroku_tv261cq2:e6jlfr6ghfutn18gos2p4j4i42@ds129821.mlab.com:29821/heroku_tv261cq2'
+mongoose.connect('mongodb://heroku_tv261cq2:mnis103666@ds129821.mlab.com:29821/heroku_tv261cq2');
 //   , {
 //   useMongoClient: true
 // }
-);
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 
