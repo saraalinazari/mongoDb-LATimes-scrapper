@@ -12,8 +12,8 @@ var cheerio = require("cheerio");
 // Require all models
 var db = require("./models");
 
-var PORT = 3000;
-
+//var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 // Initialize Express
 var app = express();
 
@@ -28,8 +28,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static("public"));
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/week18");
+//mongoose.connect("mongodb://localhost/week18");
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI
+//   , {
+//   useMongoClient: true
+// }
+);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 

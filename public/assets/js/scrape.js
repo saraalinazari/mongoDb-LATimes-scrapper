@@ -12,7 +12,8 @@ function scrapeAll(){
     $.get("/scrape", ()=>{
         console.log("got");
     }).done(()=>{
-        window.location.reload;
+        //window.location.reload();
+        window.location.href = "/";
     }
     )
 }

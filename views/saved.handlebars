@@ -11,7 +11,7 @@
                 </li>
                 <li class="nav-item">
                   {{!-- <a class="nav-link" href="/saved">Saved Articles</a> --}}
-                  <button type="button" class="btn btn-primary" id="showSavedBtn" >See the saved articles</button>
+                  <button type="button" class="btn btn-primary" id="showSavedBtn" >See saved articles</button>
                   
                 </li>
                 <li class="nav-item">
@@ -59,7 +59,7 @@
                                      {{!-- <button data-id={{_id}} class="btn btn-success mx-1 mb-1 saveBtn" data-toggle="modal" data-target="#showComment">Save Article</button> --}}
                                     <button type="button" id="openModal" class="btn btn-primary"data-toggle="modal"  
                              data-target="#noteModal{{_id}}"  data-id={{_id}}>
-        Launch demo modal
+        Comment
       </button>
                                    
                                 </div>
@@ -133,7 +133,7 @@
                     {{#each notes}}
               <div class="panel panel-default delete">
                             <div class="panel-body">
-                                <p class="previousNotes"> {{title}}: {{body}}:****{{headline}}*** :{{_id}} </p>
+                                <p class="previousNotes"> {{title}}: {{body}}</p>
                                 <button type="button" class="btn btn-danger deleteNote"  data-note-id={{_id}} data-headline-id={{headline}}>X</button> 
                             </div>
                         </div>
